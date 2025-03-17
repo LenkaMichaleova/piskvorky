@@ -9,7 +9,6 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: stretch;
     background: linear-gradient(to bottom, #615dad, #ffc8da);
     background-size: cover cover;
     background-position: center;
