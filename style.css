@@ -7,13 +7,15 @@
 }
 
 body {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     background: linear-gradient(to bottom, #615dad, #ffc8da);
     background-size: cover cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
 }
 
@@ -25,14 +27,13 @@ body {
 }
 
 .start__picture {
-    align-self: center;
-    width: 20vw;
+    justify-content: stretch;
+    width: 380px;
     border-radius: 8px 8px 0 0;
 }
 
 .start__body {
-    align-self: center;
-    width: 20vw;
+    width: 380px;
     display: flex;
     flex-direction: column;
     background-color: #283e50;
@@ -42,7 +43,7 @@ body {
 .start__title {
     align-self: center;
     margin: 5% 0;
-    font: 30px bold white;
+    font: 50px bold white;
     font-family: Lobster;
 }
 
