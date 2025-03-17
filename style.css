@@ -58,11 +58,27 @@ body {
     justify-content: stretch;
 }
 
-.start__button li {
-    display: flex;
-    justify-content: stretch;
+.start__button a {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
-.start button a {
-    justify-content: center;
+.start__button--green {
+    background-color: #1fcca4;
+}
+
+.start__button--green:hover{
+    background-color: #1cbb96;
+}
+
+.start__button--blue {
+    background-color: #0197f6;
+}
+
+.start__button--blue:hover {
+    background-color: #0090e9;
 }
