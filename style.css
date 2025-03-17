@@ -6,3 +6,63 @@
   padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #615dad, #ffc8da);
+    background-size: cover cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.start {
+    margin: 3% 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.start__picture {
+    justify-content: stretch;
+    width: 380px;
+    border-radius: 8px 8px 0 0;
+}
+
+.start__body {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: #283e50;
+    color: white;
+}
+
+.start__title {
+    align-self: center;
+    margin: 5% 0;
+    font: 50px bold white;
+    font-family: Lobster;
+}
+
+.start__description {
+    text-align: center;
+    padding: 0 3% 10% 3%;
+    
+}
+
+.start__button {
+    padding: 4%;
+    display: flex;
+    justify-content: stretch;
+}
+
+.start__button li {
+    display: flex;
+    justify-content: stretch;
+}
+
+.start button a {
+    justify-content: center;
+}
