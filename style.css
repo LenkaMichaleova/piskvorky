@@ -13,7 +13,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     display: flex;
     justify-content: center;
@@ -21,7 +21,6 @@ body {
 }
 
 .start {
-    margin: 3% 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -43,15 +42,14 @@ body {
 
 .start__title {
     align-self: center;
-    margin: 5% 0;
-    font: 30px bold white;
+    margin: 6% 0;
+    font: 33px bold white;
     font-family: Lobster;
 }
 
 .start__description {
     text-align: center;
     padding: 0 3% 10% 3%;
-    
 }
 
 .start__button {
@@ -67,11 +65,12 @@ body {
     width: 100%;
     text-decoration: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .start__button--green {
     background-color: #1fcca4;
+    border-bottom: 1.5px solid #283e50;
 }
 
 .start__button--green:hover{
