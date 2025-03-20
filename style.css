@@ -53,13 +53,14 @@ body {
 }
 
 .start__button {
-    padding: 4%;
     display: flex;
     justify-content: stretch;
+    align-items: stretch;
     border: none;
 }
 
 .start__button a {
+    padding: 4%;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -112,10 +113,6 @@ body {
     body {
         font-size: 17px;
     }
-
-    .start {
-        margin: 5%;
-    }
     
     .start__picture, 
     .start__body {
@@ -134,10 +131,6 @@ body {
 @media (min-width: 2500px) {
     body {
         font-size: 20px;
-    }
-
-    .start {
-        margin: 5%;
     }
     
     .start__picture, 
@@ -159,10 +152,6 @@ body {
         font-size: 28px;
     }
 
-    .start {
-        margin: 5%;
-    }
-    
     .start__picture, 
     .start__body {
         width: 700px;
