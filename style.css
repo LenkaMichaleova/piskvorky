@@ -93,7 +93,7 @@ body {
 
     .start__picture, 
     .start__body {
-        width: 360px;
+        width: 350px;
     }
 
     .start__title{
@@ -186,7 +186,7 @@ body {
     }
 }
 
-@media (max-height:1200px) and (min-width:2000px) and (max-width:2800px) and (orientation: landscape) {
+@media (max-height:1400px) and (min-width:1900px) and (max-width:2800px) and (orientation: landscape) {
     body {
         font-size: 28px;
     }
