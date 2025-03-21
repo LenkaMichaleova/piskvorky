@@ -12,9 +12,11 @@ body {
     background-size: cover cover;
     background-position: center;
     background-repeat: no-repeat;
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 13.5px;
+    font-size: 0.84rem;
     color: white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,12 +30,12 @@ body {
 
 .start__picture {
     justify-content: stretch;
-    width: 330px;
-    border-radius: 5px 5px 0 0;
+    width: 20.63rem;
+    border-radius: 2% 2% 0 0;
 }
 
 .start__body {
-    width: 330px;
+    width: 20.63rem;
     display: flex;
     flex-direction: column;
     background-color: #283e50;
@@ -43,7 +45,7 @@ body {
 .start__title {
     align-self: center;
     margin: 6% 0;
-    font: 36px bold white;
+    font: 2.25rem bold white;
     font-family: Lobster;
 }
 
@@ -66,12 +68,12 @@ body {
     width: 100%;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .start__button--green {
     background-color: #1fcca4;
-    border-bottom: 1.5px solid #283e50;
+    border-bottom: 0.1rem solid #283e50;
 }
 
 .start__button--green:hover{
@@ -87,9 +89,9 @@ body {
 }
 
 /* responzivita */
-@media (min-width: 1100px) {
+@media (min-width: 68.75rem) {
     body {
-        font-size: 11px;
+        font-size: 0.6875rem;
     }
 
     .start {
@@ -98,21 +100,21 @@ body {
 
     .start__picture, 
     .start__body {
-        width: 270px;
+        width: 16.88rem;
     }
 
     .start__title{
-        font-size: 32px;
+        font-size: 2rem;
     }
 
     .start__button a{
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 100rem) {
     body {
-        font-size: 14px;
+        font-size: 0.88rem;
     }
 
     .start {
@@ -121,79 +123,79 @@ body {
 
     .start__picture, 
     .start__body {
-        width: 350px;
+        width: 21.88rem;
     }
 
     .start__title{
-        font-size: 35px;
+        font-size: 2.2rem;
     }
 
     .start__button a{
-        font-size: 15px;
+        font-size: 0.95rem;
     }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 125rem) {
     body {
-        font-size: 17px;
+        font-size: 1.06rem;
     }
     
     .start__picture, 
     .start__body {
-        width: 420px;
+        width: 26.25rem;
     }
 
     .start__title {
-        font-size: 38px;
+        font-size: 2,375rem;
     }
 
     .start__button a{
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }
 
-@media (min-width: 2500px) {
+@media (min-width: 156.25rem) {
     body {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     
     .start__picture, 
     .start__body {
-        width: 500px;
+        width: 31.25rem;
     }
 
     .start__title {
-        font-size: 45px;
+        font-size: 2.81rem;
     }
 
     .start__button a{
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 
-@media (min-width: 3000px) {
+@media (min-width: 187.5rem) {
     body {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .start__picture, 
     .start__body {
-        width: 700px;
+        width: 43.75rem;
     }
 
     .start__title {
-        font-size: 60px;
+        font-size: 3.75rem;
     }
 
     .start__button a{
-        font-size: 32px;
+        font-size: 2rem;
     }
 }
 
 /* responzivita pro otočený mobil na bok (landscape) */
-@media (max-height:500px) and (max-width:950px) {
+@media (max-height: 31.25rem) and (max-width: 59.375rem) {
     body {
-        font-size: 10px;
+        font-size: 0.62rem;
     }
 
     .start {
@@ -213,7 +215,7 @@ body {
     }
 
     .start__title{
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .start__description {
@@ -221,7 +223,7 @@ body {
     }
 
     .start__button a{
-        font-size: 11px;
+        font-size: 0.688rem;
         padding: 2.7%;
     }
 }
