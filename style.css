@@ -3,15 +3,15 @@
 :after {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+
 }
 
 body {
     height: 100vh;
     background: linear-gradient(to bottom, #615dad, #ffc8da);
-    background-size: cover cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 0.84rem;
@@ -22,6 +22,7 @@ body {
     align-items: center;
 }
 
+/* START HRY */
 .start {
     display: flex;
     flex-wrap: wrap;
@@ -168,7 +169,7 @@ body {
         font-size: 2.81rem;
     }
 
-    .start__button a{
+    .start__button a {
         font-size: 1.5rem;
     }
 }
@@ -187,7 +188,7 @@ body {
         font-size: 3.75rem;
     }
 
-    .start__button a{
+    .start__button a {
         font-size: 2rem;
     }
 }
@@ -200,21 +201,20 @@ body {
 
     .start {
         flex-direction: row;
+        justify-content: center;
+        margin: 0 5%;
     }
 
     .start__picture {
-        orientation: portrait;
-        width: 35vw;
-        height: 60vh;
         border-radius: 2% 0 0 2%;
+        flex-basis: 40%;
     }
 
     .start__body {
-        width: 40vw;
-        height: 60vh;
+        flex-basis: 40%;
     }
 
-    .start__title{
+    .start__title {
         font-size: 1.75rem;
     }
 
@@ -222,8 +222,103 @@ body {
         padding: 0 3% 5% 3%;
     }
 
-    .start__button a{
+    .start__button a {
         font-size: 0.688rem;
         padding: 2.7%;
     }
+}
+
+
+/* HRA */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vmin;
+}
+
+.game__title {
+    align-self: center;
+    font: 2.7rem bold white;
+    font-family: Lobster;
+}
+
+.game__nav {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    margin: 0 0 2% 0;
+    gap: 2%;
+}
+
+/* hráč */
+.game__player {
+    display: flex;
+    align-items: center;
+    flex-basis: 50%;
+    background: none;
+    border: none;
+    color: white;
+    gap: 8%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.game__player img {
+    height: 50%;
+}
+
+
+/* tlačítka hry - domů a restart*/
+.game__menu {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 48%;
+    gap: 0.5rem;
+}
+
+.game__button {
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 2%;
+    border: none;
+    border-radius: 10%;
+}
+
+.game__button--green {
+    background-color: #1fcca4;
+}
+
+.game__button--green:hover{
+    background-color: #1cbb96;
+}
+
+.game__button--blue {
+    background-color: #0197f6;
+}
+
+.game__button--blue:hover {
+    background-color: #0090e9;
+}
+
+/* mřížka */
+.game__table {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.game__field {
+    flex-basis: 10%;
+    aspect-ratio: 1;
+    opacity: 0.5;
+    border: 1px solid #283e50;
+    cursor: pointer;
+}
+
+.game__field:hover, .game__field:focus {
+    opacity: 0.8;
 }
