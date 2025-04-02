@@ -201,6 +201,7 @@ body {
 
     .start {
         flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
         margin: 0 5%;
     }
