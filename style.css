@@ -315,11 +315,39 @@ body {
 .game__field {
     flex-basis: 10%;
     aspect-ratio: 1;
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    background: rgba(255, 255, 255, 0.3);
     border: 1px solid #283e50;
     cursor: pointer;
 }
 
 .game__field:hover, .game__field:focus {
-    opacity: 0.8;
+    /* opacity: 0.8; */
+    background: rgba(255, 255, 255, 0.4);
+
+}
+
+
+/* křížky a kolečka */
+.game__field--circle,
+.game__field--cross,
+.game__field--circle:hover,
+.game__field--circle:focus,
+.game__field--cross:hover,
+.game__field--cross:focus {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+.game__field--circle,
+.game__field--circle:hover,
+.game__field--circle:focus {
+    background-image: url(img/circle_black.svg);
+}
+
+.game__field--cross,
+.game__field--cross:hover,
+.game__field--cross:focus {
+    background-image: url(img/cross_black.svg);
 }
