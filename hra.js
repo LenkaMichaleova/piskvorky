@@ -1,4 +1,4 @@
-let currentPlayer = 'circle'
+let currentPlayer = "circle"
 
 document.querySelectorAll(".game__field").forEach((btn) => {
     btn.addEventListener("click", (e) => {
@@ -14,4 +14,10 @@ document.querySelectorAll(".game__field").forEach((btn) => {
             currentPlayer = "circle"
         }
     })
+})
+
+document.querySelector(".game__button--blue").addEventListener("click", (event) => {
+    if (window.confirm('Opravdu chceš začít znovu?') === false) {
+        event.preventDefault()
+    }
 })

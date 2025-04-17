@@ -338,6 +338,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70%;
+    animation: boxAnimation .35s;
 }
 
 .game__field--circle,
@@ -350,4 +351,13 @@ body {
 .game__field--cross:hover,
 .game__field--cross:focus {
     background-image: url(img/cross_black.svg);
+}
+
+@keyframes boxAnimation {
+    from {
+      background-size: 0%;
+    }
+    to {
+      background-size: 70%;
+    }
 }
