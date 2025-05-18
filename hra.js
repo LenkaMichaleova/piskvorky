@@ -9,7 +9,7 @@ document.querySelectorAll(".game__field").forEach((btn, i) => {
         const player = currentPlayer === "circle" ? "o" : "x"
         herniPole[i] = player
         const winner = findWinner(herniPole)
-        
+
         setTimeout(() => {
             if (winner === "o" || winner === "x") {
                 alert(`Vyhrál hráč se symbolem ${winner}.`)
@@ -17,7 +17,6 @@ document.querySelectorAll(".game__field").forEach((btn, i) => {
             } else if (winner === "tie"){
                 alert(`Hra skončila remízou.`)
             }
-            
             if (currentPlayer === "cross") {
                 autoPlay(herniPole)
             }
@@ -27,6 +26,8 @@ document.querySelectorAll(".game__field").forEach((btn, i) => {
 
 document.querySelectorAll(".game__field").forEach((btn) => {
     btn.addEventListener("click", (e) => {
+        e.target.classList.remove("game__field--empty")
+
         if (currentPlayer === "circle") {
             document.querySelector(".game__player img").src = "img/cross.svg"
             e.target.classList.add("game__field--circle")
@@ -48,6 +49,10 @@ document.querySelector(".game__button--blue").addEventListener("click", (event) 
 })
 
 const autoPlay = async (pole) => {
+    document.querySelectorAll(".game__field--empty").forEach(btn => {
+        btn.disabled = true
+    })
+
     const response = await fetch("https://piskvorky.czechitas-podklady.cz/api/suggest-next-move", {
         method: 'POST',
         headers: {
@@ -59,7 +64,15 @@ const autoPlay = async (pole) => {
         }),
     })
     const data = await response.json()
-    const { x, y } = data.position
-    const field = document.querySelectorAll(".game__field")[x + y * 10]
-    field.click()
+    
+    if (response.ok) {    
+        document.querySelectorAll(".game__field--empty").forEach(btn => {
+            btn.disabled = false
+        })
+
+        const { x, y } = data.position
+        const field = document.querySelectorAll(".game__field")[x + y * 10]
+        console.log(field)
+        field.click()
+    }
 }
