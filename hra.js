@@ -64,15 +64,13 @@ const autoPlay = async (pole) => {
         }),
     })
     const data = await response.json()
+    const { x, y } = data.position
+    const field = document.querySelectorAll(".game__field")[x + y * 10]
     
     if (response.ok) {    
         document.querySelectorAll(".game__field--empty").forEach(btn => {
             btn.disabled = false
         })
-
-        const { x, y } = data.position
-        const field = document.querySelectorAll(".game__field")[x + y * 10]
-        console.log(field)
         field.click()
     }
 }
