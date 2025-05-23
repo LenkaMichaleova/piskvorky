@@ -5,28 +5,12 @@ herniPole.fill("_")
 let currentPlayer = "circle"
 
 document.querySelectorAll(".game__field").forEach((btn, i) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+        e.target.classList.remove("game__field--empty")
+
         const player = currentPlayer === "circle" ? "o" : "x"
         herniPole[i] = player
         const winner = findWinner(herniPole)
-
-        setTimeout(() => {
-            if (winner === "o" || winner === "x") {
-                alert(`Vyhrál hráč se symbolem ${winner}.`)
-                window.location.reload()
-            } else if (winner === "tie"){
-                alert(`Hra skončila remízou.`)
-            }
-            if (currentPlayer === "cross") {
-                autoPlay(herniPole)
-            }
-        }, 250)
-    })
-})
-
-document.querySelectorAll(".game__field").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-        e.target.classList.remove("game__field--empty")
 
         if (currentPlayer === "circle") {
             document.querySelector(".game__player img").src = "img/cross.svg"
@@ -39,6 +23,18 @@ document.querySelectorAll(".game__field").forEach((btn) => {
             e.target.disabled = true
             currentPlayer = "circle"
         }
+
+        setTimeout(() => {
+            if (winner === "o" || winner === "x") {
+                alert(`Vyhrál hráč se symbolem ${winner}.`)
+                window.location.reload()
+            } else if (winner === "tie"){
+                alert(`Hra skončila remízou.`)
+            }
+            if (currentPlayer === "cross") {
+                autoPlay(herniPole)
+            }
+        }, 250)
     })
 })
 
